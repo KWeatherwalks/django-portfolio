@@ -7,8 +7,8 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "categories"
 
-        def __str__(self):
-            return self.name
+    def __str__(self):
+        return self.name
 
 
 class Post(models.Model):
