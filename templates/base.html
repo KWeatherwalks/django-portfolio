@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% block title %}
+        KevDubData Homepage
+      {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>{% block title %}My Personal Portfolio{% endblock title %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+  <body class="container">
+    <h1>KevDubData</h1>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'blog_index' %}">Blog</a>
+    <a href="{% url 'project_index' %}">Portfolio</a>
+    <hr />
+    {% block page_title %}
 
-<body class="container">
-    {% block page_content %}{% endblock page_content %}
-</body>
+    {% endblock %}
+    {% block page_content %}
 
+    {% endblock %}
+  </body>
 </html>
